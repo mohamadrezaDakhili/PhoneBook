@@ -29,6 +29,10 @@ export default class CreatePhoneBook extends Component {
     }
   };
 
+  clearInput = (e) => {
+    e.target.value = " ";
+  };
+
   render() {
     return (
       <div className="">
@@ -47,6 +51,7 @@ export default class CreatePhoneBook extends Component {
           />
           <button type="submit">submit</button>
         </form>
+        <button onClick={this.clearInput}>clear</button>
       </div>
     );
   }
